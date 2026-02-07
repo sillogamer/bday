@@ -176,9 +176,9 @@ p {
 
 .album {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 16px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -196,7 +196,7 @@ p {
 
 .photo img {
   width: 100%;
-  height: 120px;
+  height: 220px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -207,8 +207,12 @@ p {
   color: #1a1a2e;
 }
 
+@media (max-width: 768px) {
+  .photo img { height: 160px; }
+}
+
 @media (max-width: 480px) {
-  .photo img { height: 100px; }
+  .photo img { height: 120px; }
 }
 
 /* Scroll prompt */
