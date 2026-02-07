@@ -1,0 +1,41 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    zoom: 150%;
+}
+
+body {
+    height: 100%;
+}
+
+/* Fondo */
+
+.container {
+    overflow: hidden;
+    height: 100%;
+}
+
+.sliding-background {
+    background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5f9b52a9-8558-4a32-bf92-f851ba6aebb5/dij3vdf-9b56e7dd-a4d2-4a7b-a6cc-adc2b0e9556d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81ZjliNTJhOS04NTU4LTRhMzItYmY5Mi1mODUxYmE2YWViYjUvZGlqM3ZkZi05YjU2ZTdkZC1hNGQyLTRhN2ItYTZjYy1hZGMyYjBlOTU1NmQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yCyGbWoHY6XN8PTil5op7KuVYiYKhuGnrIbpRQ0ncG4") repeat-x;
+    height: 100%;
+    width:1433px;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(-450px, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+    }
+}

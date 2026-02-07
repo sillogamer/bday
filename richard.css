@@ -1,0 +1,38 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    zoom: 120%;
+}
+
+body{
+    height: 100%;
+}
+
+/* Fondo */
+
+.container {
+  overflow: hidden;
+  height: 100%;
+}
+
+.sliding-background {
+  background: url("https://images6.alphacoders.com/114/thumb-1920-1148181.png") repeat-x;
+  height: 100%;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
