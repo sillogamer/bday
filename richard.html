@@ -16,6 +16,30 @@
             </div>
         </div>
 
-        <p>Eyyyy Richard, soy yo Tomás, sip escribi esta página web sin que te dieses cuenta en mi tiempo libre, y es todo para felicitarte a TÍ (y a tu hermano claro). Espero que te vaya muy bien este 18 año y me alegro de tener amigos como tú</p>
+        <a href="#message" class="scroll-prompt" aria-label="Scroll to message">Baja ↓</a>
+
+                <p id="message">Eyyyy Richard, soy yo Tomás, sip escribi esta página web sin que te dieses cuenta en mi tiempo libre, y es todo para felicitarte a TÍ (y a tu hermano claro). Espero que te vaya muy bien este 18 año y me alegro de tener amigos como tú, eres genial en todos los sentidos 🙌 y Denís tambien esque los dos sois muy guays<br><img src="https://media.tenor.com/xQM3D2rSud0AAAAM/shocked-cat.gif"></p>
+
+                <section class="album-section">
+                    <div class="album">
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=1" alt="placeholder 1"></figure>
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=2" alt="placeholder 2"></figure>
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=3" alt="placeholder 3"></figure>
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=4" alt="placeholder 4"></figure>
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=5" alt="placeholder 5"></figure>
+                        <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=6" alt="placeholder 6"></figure>
+                    </div>
+                </section>
+        
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const prompt = document.querySelector('.scroll-prompt');
+                        if (!prompt) return;
+                        const hide = () => { prompt.style.transition = 'opacity 200ms'; prompt.style.opacity = '0'; setTimeout(() => { prompt.style.display = 'none'; }, 250); window.removeEventListener('scroll', onScroll); };
+                        const onScroll = () => { if (window.scrollY > 50) hide(); };
+                        window.addEventListener('scroll', onScroll, { passive: true });
+                        prompt.addEventListener('click', function () { setTimeout(hide, 150); });
+                    });
+                </script>
     </body>
 </html>

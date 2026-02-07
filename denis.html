@@ -15,6 +15,30 @@
   </div>
 </div>
 
-    <p>Felicidades Denis, ya son 18 :o eso es un montón, espero que te vaya muy bien tu dieziochoavo año y que lo sigas pasando pipa siendo un adulto y tal y pues si... nose que mas poner excepto que y me alegro de tener amigos como tú</p>
+    <a href="#message" class="scroll-prompt" aria-label="Scroll to message">Baja ↓</a>
+
+        <p id="message">Felicidades Denis, ya son 18 :o eso es un montón, espero que te vaya muy bien tu dieziochoavo año y que lo sigas pasando pipa siendo un adulto y tal y pues si... nose que mas poner excepto que y me alegro de tener amigos como tú y tu hermano 😊👌<br><img src="https://media.tenor.com/arqlNu8gyJYAAAAM/cat-cat-jumping.gif" alt="" srcset=""></p>
+
+        <section class="album-section">
+            <div class="album">
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=11" alt="placeholder 1"></figure>
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=12" alt="placeholder 2"></figure>
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=13" alt="placeholder 3"></figure>
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=14" alt="placeholder 4"></figure>
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=15" alt="placeholder 5"></figure>
+                <figure class="photo"><img src="https://source.unsplash.com/collection/190727/400x300?sig=16" alt="placeholder 6"></figure>
+            </div>
+        </section>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const prompt = document.querySelector('.scroll-prompt');
+                if (!prompt) return;
+                const hide = () => { prompt.style.transition = 'opacity 200ms'; prompt.style.opacity = '0'; setTimeout(() => { prompt.style.display = 'none'; }, 250); window.removeEventListener('scroll', onScroll); };
+                const onScroll = () => { if (window.scrollY > 50) hide(); };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                prompt.addEventListener('click', function () { setTimeout(hide, 150); });
+            });
+        </script>
 </body>
 </html>
