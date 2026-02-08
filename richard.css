@@ -191,13 +191,26 @@ p {
 }
 
 /* per-photo size helpers (desktop defaults) */
-.photo--large { grid-column: span 2; }
+.photo--large { 
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
 .photo--large img { height: 360px; }
 
-.photo--tall { grid-row: span 2; }
+.photo--tall { 
+  grid-row: span 2;
+  aspect-ratio: 3 / 4;
+}
 .photo--tall img { height: 420px; }
 
+.photo--medium { 
+  aspect-ratio: 1 / 1;
+}
 .photo--medium img { height: 260px; }
+
+.photo--small { 
+  aspect-ratio: 4 / 5;
+}
 .photo--small img { height: 180px; }
 
 /* responsive overrides */
